@@ -47,10 +47,10 @@ include ('page-footer.php');
             <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
             <nav id='nav'>
               <ul>
-              <li><a href='../xxx'>Menu</a></li>
-              <li><a href='../xxx'>Catering</a></li>
-              <li><a href='../twl'>Hours & Location</a></li>
-              <li><a href='../xxx'>Contact Us</a></li>
+                <li><a href='../xxx'>Menu</a></li>
+                <li><a href='../xxx'>Catering</a></li>
+                <li><a href='../twl'>Hours & Location</a></li>
+                <li><a href='../xxx'>Contact Us</a></li>
               </ul>
             </nav>
           </div>
@@ -59,9 +59,19 @@ include ('page-footer.php');
         </div>
 
         <!-- Order Cluster -->
-        <div id='order-cluster' class='b-orange'>
-          <p>Order Now</p>
+        <div id='order-cluster' class="button">
+            <a href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
+            <div id="order-overlay">
+              <a href='javascript:void(0)' class='closebtn' onclick='closeOrderStack()'>&times;</a>
+                <div id="order-stack">
+                  <ul>
+                    <li><a href='../xxx'>Call Us</a></li>
+                    <li><a href='../xxx'>Uber Eats</a></li>
+                  </ul>
+                </div>
+            </div>
         </div>
+
       </div>
 
     </header>
@@ -71,13 +81,29 @@ include ('page-footer.php');
     <!-- Generate Nav Development END -->
 
     <main>
+        <div class="divide"></div>
     </main>
 <!--
     <?php
       //generateFooter();
     ?>-->
     <!-- Generate Footer Development START -->
+    <footer>
+      <div class='footer-link-container'>
+        <ul>
+          <li><a class ='footer-link' href='../about'>Our Story</a></li>
+          <li><a class ='footer-link' href='../privacy'>Privacy</a></li>
+        </ul>
+        <ul>
+          <li><a class ='footer-link' href=''>Contact Us</a></li>
+          <li>
+            <a class='footer-link' href='' target='_blank' rel='noopener' aria-label='twitter icon'><i class='fa-brands fa-twitter' ></i></a>
+          </li>
+        </ul>
 
+      </div>
+
+    </footer>
     <!-- Generate Footer Development END -->
 
   <!-- Load Giannellis_v?.js-->

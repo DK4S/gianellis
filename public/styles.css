@@ -3,12 +3,15 @@
 :root {
   /* Gianelli's Below */
   --main-green: #008C45;
+  --alt-green: #5ced73;
+  /*--alt-green: #69d84f;*/
+  --main-red: #CD212A;
 
   /* FXO Inheritance Below */
 
   --main-cream: #f7f6f5;
   --main-gold: #f5df4d;
-  --main-charcoal: #353535;
+  --main-charcoal: #292929;
   --text-black: rgba(0,0,0,1);
   --text-gray: rgba(29,29,29,.75);
   --text-lightgray: rgba(29,29,29,.2);
@@ -114,13 +117,13 @@ header {
 }
 
 .logo-header {
-  height: 5rem;
+  height: 8rem;
 }
 
 /* Nav, Mobile First w/ JavaScript overlay container. */
 /* See media calls for responsive styling for large screens.*/
 
-.overlay {
+.overlay, #order-overlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -131,7 +134,7 @@ header {
   background-color: rgba(0,0,0, 0.9);
 }
 
-nav {
+nav, #order-stack {
   position: relative;
   top: 25%;
   width: 100%;
@@ -140,17 +143,19 @@ nav {
   line-height: 4rem;
 }
 
-nav ul {
+nav ul, #order-stack ul {
   display: flex;
   flex-direction: column;
 }
 
 
-.overlay a, .fa-bars {
+.overlay a, .fa-bars, #order-overlay a {
+  background: none;
   text-decoration: none;
   font-size: 3.5rem;
   line-height: 4rem;
   margin-top: 1.5rem;
+  padding: 0;
   color: var(--text-white);
   display: block;
 }
@@ -160,7 +165,7 @@ nav ul {
     transform: translate(0px,-3px);
 }
 
-.overlay .closebtn {
+.overlay .closebtn, #order-overlay .closebtn {
   position: absolute;
   top: 4rem;
   right: 4rem;
@@ -177,6 +182,36 @@ nav ul {
   padding: 1rem;
   font-size: 2rem;
   margin-bottom: .4rem;
+}
+
+/* Order Button */
+.button a {
+  background: var(--alt-green);
+  color: var(--main-charcoal);
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  margin: 2.75rem 0 0 1rem;
+  font-size: 1.75rem;
+  display: inline-block;
+  transition: all ease-in-out 300ms;
+}
+
+.button a:hover {
+  webkit-transform: translate(0px,-5px);
+  transform: translate(0px,-5px);
+}
+
+
+/* Main */
+
+/* Visual Line Breaks */
+
+
+.divide {
+  margin: 1rem auto;
+  border-bottom: .1rem solid var(--main-green);
+  width: 100%;
 }
 
 
@@ -215,29 +250,6 @@ footer {
   text-decoration: none;
 }
 
-#watermark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--main-charcoal);
-  height: 75px;
-}
-
-#footer-logo-container {
-  display: flex;
-  align-items: center;
-  width: 3rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: var(--main-cream);
-  border: 1px solid black;
-  box-shadow: 0 0 0 .25rem var(--main-cream);
-}
-
-#footer-logo {
-  height: 2rem;
-  margin: auto auto;
-}
 
 /* Responsive Screen Breaks */
 
@@ -252,7 +264,7 @@ footer {
   }
 
   .logo-header {
-    height: 14rem;
+    height: 11rem;
   }
 
   /* Footer */
@@ -319,7 +331,7 @@ footer {
   }
 
   .overlay a {
-    color: var(--main-green);
+    color: var(--main-charcoal);
     text-align: center;
     padding: 1.5rem 1.75rem;
     font-size: 1.75rem;
