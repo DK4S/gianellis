@@ -180,6 +180,33 @@ nav ul {
 }
 
 
+/* Sections */
+
+.standard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2.5rem;
+}
+
+.book-image {
+  box-shadow: .4rem .5rem 1.8rem .4rem #505050;
+  margin-top: 1.5rem;
+  width: 100%;
+  align-self: start;
+}
+
+.book-information {
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  padding-top: 2.5rem;
+}
+
+.book-image, .book-information {
+  width: 100%;
+  max-width: 35rem;
+}
+
 
 /* Footer */
 
@@ -255,6 +282,20 @@ footer {
     height: 14rem;
   }
 
+  /* Sections */
+
+  .page-block {
+    max-width: 100rem;
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+
+  .book-image{
+    width: 90%;
+  }
+
+
+
   /* Footer */
 
   .footer-link-container{
@@ -323,6 +364,11 @@ footer {
     text-align: center;
     padding: 1.5rem 1.75rem;
     font-size: 1.75rem;
+  }
+
+  /* Base Styles */
+  .book-information {
+    padding-top: 0;
   }
 
 
