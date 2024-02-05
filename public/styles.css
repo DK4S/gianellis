@@ -3,8 +3,8 @@
 :root {
   /* Gianelli's Below */
   --main-green: #008C45;
-  --alt-green: #5ced73;
-  /*--alt-green: #69d84f;*/
+  /*--alt-green: #5ced73;*/
+  --alt-green: rgb(0, 140, 69, .45);
   --main-red: #CD212A;
 
   /* FXO Inheritance Below */
@@ -224,30 +224,39 @@ nav ul, #order-stack ul {
   padding: 2.5rem;
 }
 
-.book-image {
-  box-shadow: .4rem .5rem 1.8rem .4rem #505050;
+.section-block-image {
   margin-top: 1.5rem;
   width: 100%;
   align-self: start;
 }
 
-.book-information {
+.section-block-information {
   margin: 0 auto;
   margin-top: 1.5rem;
   padding-top: 2.5rem;
 }
 
-.book-image, .book-information {
+.section-block-image, .section-block-information {
   width: 100%;
   max-width: 35rem;
 }
 
+.section-block-title {
+  font-size: 2.0rem;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+}
+
+.section-block-body {
+  font-size: 1.5rem;
+}
 
 /* Footer */
 
 footer {
 
-  background-color: #f7f6f5;
+  /*background-color: #f7f6f5;*/
+  background-color: rgb(0, 140, 69, .20);
   margin-top: 1.25rem;
   padding-top: 2rem;
   line-height: 2rem;
@@ -302,7 +311,7 @@ footer {
     margin: 0 1rem;
   }
 
-  .book-image{
+  .section-block-image{
     width: 90%;
   }
 
@@ -379,7 +388,7 @@ footer {
   }
 
   /* Base Styles */
-  .book-information {
+  .section-block-information {
     padding-top: 0;
   }
 
