@@ -1,0 +1,114 @@
+<!--<?php
+set_include_path('../private_php/');
+include ('events.php');
+include ('library.php');
+include ('page-head.php');
+include ('page-nav.php');
+include ('page-footer.php');
+?>-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Gianelli's Drive Thru</title>
+    <meta name="description" content="Gianelli's proudly serves hot dogs, burgers, italian beef and sausage, gyros, pasta, salads. Try our homemade family recipes today!">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preload -->
+    <link rel="preload" as="style" href="styles.css">
+    <!-- Fonts, Symbols, CSS-->
+    <link rel="icon" type="image/svg" href="images/Gianellis-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+
+  <body>
+
+<!--
+    <?php
+    //  generateNav();
+    ?>-->
+    <!-- Generate Nav Development START -->
+
+
+    <!-- Page Header -->
+    <header id='page-header'>
+
+      <!-- Logo -->
+      <div id='logo-container'>
+        <a href='gianellis-index.html'><img id='logo-header' class='logo-header' src='images/Gianellis-logo.png' alt='Gianelli&apos;s Logo, our name with green and red paintbrush strokes evoking the Italian flag.'/></a>
+      </div>
+
+      <div id='navigation-group' class='flex'>
+        <!-- Nav Cluster -->
+        <div id='ui-cluster' class='flex'>
+
+          <div id='hamburgerStack' class='overlay'>
+            <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
+            <nav id='nav'>
+              <ul>
+                <li><a href='../xxx'>Menu</a></li>
+                <li><a href='../xxx'>Catering</a></li>
+                <li><a href='../twl'>Hours & Location</a></li>
+                <li><a href='../xxx'>Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+          <span onclick='openNav()'><i class='fa fa-bars'></i></span>
+
+        </div>
+
+        <!-- Order Cluster -->
+        <div id='order-cluster' class="button">
+            <a href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
+            <div id="order-overlay">
+              <a href='javascript:void(0)' class='closebtn' onclick='closeOrderStack()'>&times;</a>
+                <div id="order-stack">
+                  <ul>
+                    <li><a href='../xxx'>Call Us</a></li>
+                    <li><a href='../xxx'>Uber Eats</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- Generate Nav Development END -->
+
+    <main>
+        <div class="divide"></div>
+    </main>
+<!--
+    <?php
+      //generateFooter();
+    ?>-->
+    <!-- Generate Footer Development START -->
+    <footer>
+      <div class='footer-link-container'>
+        <ul>
+          <li><a class ='footer-link' href='../about'>Our Story</a></li>
+          <li><a class ='footer-link' href='../privacy'>Privacy</a></li>
+        </ul>
+        <ul>
+          <li><a class ='footer-link' href=''>Contact Us</a></li>
+          <li>
+            <a class='footer-link' href='' target='_blank' rel='noopener' aria-label='twitter icon'><i class='fa-brands fa-twitter' ></i></a>
+          </li>
+        </ul>
+
+      </div>
+
+    </footer>
+    <!-- Generate Footer Development END -->
+
+  <!-- Load Giannellis_v?.js-->
+  <script src="GDTv-01.js"></script>
+
+
+  </body>
+</html>

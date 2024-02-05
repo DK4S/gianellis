@@ -1,0 +1,420 @@
+/* Variables  */
+
+:root {
+  /* Gianelli's Below */
+  --main-green: #008C45;
+  --alt-green: #5ced73;
+  /*--alt-green: #69d84f;*/
+  --main-red: #CD212A;
+
+  /* FXO Inheritance Below */
+
+  --main-cream: #f7f6f5;
+  --main-gold: #f5df4d;
+  --main-charcoal: #292929;
+  --text-black: rgba(0,0,0,1);
+  --text-gray: rgba(29,29,29,.75);
+  --text-lightgray: rgba(29,29,29,.2);
+  --text-white: #f7f6f5;
+  --nav-overlay: rgba(0,0,0, 0.9);
+  --button-gray: rgba(29,29,29,.8);
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", "Helvetica", "sans-serif";
+  color: var(--text-gray);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .09rem;
+  line-height: 2.1rem;
+  font-variant: normal;
+}
+
+main {
+  flex: 1 0 auto;
+  margin: 0 5vw;
+  padding-bottom: 2rem;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--main-gold);
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1, h2, {
+  font-family: "Special Elite", Courier, monospace;
+  color: var(--main-charcoal);
+  font-size: 2.25rem;
+  line-height: 3rem;
+  padding-top: 1.5rem;
+}
+
+h3 {
+  color: var(--text-gray);
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+
+/* Header */
+
+header {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem 0rem 1.5rem;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+#logo-container {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.logo-header {
+  height: 8rem;
+}
+
+/* Nav, Mobile First w/ JavaScript overlay container. */
+/* See media calls for responsive styling for large screens.*/
+
+.overlay, #order-overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+}
+
+nav, #order-stack {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  line-height: 4rem;
+}
+
+nav ul, #order-stack ul {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.overlay a, .fa-bars, #order-overlay a {
+  background: none;
+  text-decoration: none;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  margin-top: 1.5rem;
+  padding: 0;
+  color: var(--text-white);
+  display: block;
+}
+
+.overlay a:hover, #ui-cluster span:hover{
+    -webkit-transform: translate(0px,-3px);
+    transform: translate(0px,-3px);
+}
+
+.overlay .closebtn, #order-overlay .closebtn {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 6rem;
+}
+
+#ui-cluster{
+  display: flex;
+  align-items: flex-end;
+}
+
+.fa-bars {
+  color: var(--main-green);
+  padding: 1rem;
+  font-size: 2rem;
+  margin-bottom: .4rem;
+}
+
+/* Order Button */
+.button a {
+  background: var(--alt-green);
+  color: var(--main-charcoal);
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  margin: 2.75rem 0 0 1rem;
+  font-size: 1.75rem;
+  display: inline-block;
+  transition: all ease-in-out 300ms;
+}
+
+.button a:hover {
+  webkit-transform: translate(0px,-5px);
+  transform: translate(0px,-5px);
+}
+
+
+/* Main */
+
+/* Visual Line Breaks */
+
+
+.divide {
+  margin: 1rem auto;
+  border-bottom: .1rem solid var(--main-green);
+  width: 100%;
+}
+
+
+
+/* Footer */
+
+footer {
+
+  background-color: #f7f6f5;
+  margin-top: 1.25rem;
+  padding-top: 2rem;
+  line-height: 2rem;
+  font-size: 1.75rem;
+}
+
+.footer-link-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  max-width: 750px;
+}
+
+.footer-link-title {
+  color: var(--main-charcoal);
+  font-size: 1.75rem;
+  font-family: "Special Elite", Courier, monospace;
+  padding: 1rem 0;
+}
+
+
+.footer-link:link, .footer-link:visited {
+  color: var(--main-charcoal);
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  text-decoration: none;
+}
+
+
+/* Responsive Screen Breaks */
+
+@media screen and (min-width: 450px) {
+
+  /* Header */
+
+  header{
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .logo-header {
+    height: 11rem;
+  }
+
+  /* Footer */
+
+  .footer-link-container{
+    padding-left: 0;
+    width: 95vw;
+    max-width: 75rem;
+  }
+
+  .footer-link-title{
+    font-size: 2rem;
+  }
+
+  .footer-link:link {
+    font-size: 1.5rem;
+  }
+
+  #watermark{
+    height: 120px;
+  }
+
+  #footer-logo-container {
+    width: 4.75rem;
+    height: 6.25rem;
+  }
+
+  #footer-logo {
+    height: 3.5rem;
+  }
+
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+  /*Nav styles for when displayed on wide screens w/o JavaScript overlay*/
+
+  nav {
+    margin: 0;
+    top: auto;
+    width: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .overlay .closebtn {
+    display: none;
+  }
+
+  .overlay{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 0;
+    background-color: inherit;
+  }
+
+  .overlay a {
+    color: var(--main-charcoal);
+    text-align: center;
+    padding: 1.5rem 1.75rem;
+    font-size: 1.75rem;
+  }
+
+
+}
+
+/* Class-based Style Stand Ins*/
+
+
+.center {
+  text-align: center;
+}
+
+.limit-width{
+  max-width: 525px;
+}
+
+.indent {
+  padding-left: 2rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-start{
+  display: flex;
+  align-items: flex-end;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+
+.small-text {
+  font-size: 1.1rem;
+}
+
+
+/* Accessability */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px,1px,1px,1px) !important;
+  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important; 
+  position: absolute !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/*Border classes for element visualization during development.*/
+
+.b-red{
+  border: 3px solid red;
+}
+.b-orange{
+  border: 3px solid orange;
+}
+.b-yellow{
+  border: 3px solid yellow;
+}
+.b-green{
+  border: 3px solid green;
+}
+.b-blue{
+  border: 3px solid blue;
+}
+.b-purple{
+  border: 3px solid purple;
+}
+
+.b-black{
+  border: 3px solid black;
+}
