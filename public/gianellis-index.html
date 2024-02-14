@@ -41,11 +41,12 @@ include ('page-footer.php');
 
       <div id='navigation-group' class='flex'>
         <!-- Nav Cluster -->
-        <div id='ui-cluster' class='flex'>
+        <div id='ui-cluster' class='flex b-green'>
 
-          <div id='hamburgerStack' class='overlay'>
-            <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
-            <nav id='nav'>
+          <div id='hamburgerStack' class='overlay b-blue'>
+
+            <nav id='nav' class="b-yellow">
+              <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
               <ul>
                 <li><a href='../xxx'>Menu</a></li>
                 <li><a href='../xxx'>Catering</a></li>
@@ -61,9 +62,10 @@ include ('page-footer.php');
         <!-- Order Cluster -->
         <div id='order-cluster' class="button">
             <a href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
-            <div id="order-overlay">
-              <a href='javascript:void(0)' class='closebtn' onclick='closeOrderStack()'>&times;</a>
-                <div id="order-stack">
+            <div id="order-overlay" class="b-blue">
+
+                <div id="order-stack" class="b-yellow">
+                  <a href='javascript:void(0)' class='closebtn' onclick='closeOrderStack()'>&times;</a>
                   <ul>
                     <li><a href='../xxx'>Call Us</a></li>
                     <li><a href='../xxx'>Uber Eats</a></li>
@@ -89,13 +91,13 @@ include ('page-footer.php');
       <!-- Sample Section #1 -->
       <section class="page-block">
         <h2 class="sr-only">Sample Section #1</h2>
-        <div class="standard-container">
-          <a href=""><img class="section-block-image" src="images/Vegetarian_greek_pita-400x284.jpg" alt=""/></a>
-          <div class="section-block-information">
-            <p class="section-block-title">
+        <div class="standard-container b-orange">
+          <a href=""><img class="section-block-image b-purple" src="images/Vegetarian_greek_pita-400x284.jpg" alt=""/></a>
+          <div class="section-block-information b-yellow">
+            <p class="section-block-title b-blue">
               We Make Catering Easy!
             </p>
-            <p class="section-block-body">
+            <p class="section-block-bodyb-green">
               Gianelli's can cater your next business event or holiday party. Call us today to make your reservation.
             </p>
           </div>

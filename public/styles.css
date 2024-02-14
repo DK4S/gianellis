@@ -131,12 +131,13 @@ header {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0,0,0, 0.6);
 }
 
 nav, #order-stack {
   position: relative;
-  top: 25%;
+  background-color: white;
+  top: 10%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
@@ -156,7 +157,6 @@ nav ul, #order-stack ul {
   line-height: 4rem;
   margin-top: 1.5rem;
   padding: 0;
-  color: var(--text-white);
   display: block;
 }
 
@@ -166,10 +166,12 @@ nav ul, #order-stack ul {
 }
 
 .overlay .closebtn, #order-overlay .closebtn {
+  float: right;
+  /*
   position: absolute;
   top: 4rem;
   right: 4rem;
-  font-size: 6rem;
+  font-size: 6rem;*/
 }
 
 #ui-cluster{
@@ -221,7 +223,7 @@ nav ul, #order-stack ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2.5rem;
+  margin-top: 3rem;
 }
 
 .section-block-image {
@@ -238,7 +240,7 @@ nav ul, #order-stack ul {
 
 .section-block-image, .section-block-information {
   width: 100%;
-  max-width: 35rem;
+  max-width: 70rem;
 }
 
 .section-block-title {
@@ -309,10 +311,6 @@ footer {
     max-width: 100rem;
     padding: 1rem;
     margin: 0 1rem;
-  }
-
-  .section-block-image{
-    width: 90%;
   }
 
 
@@ -387,9 +385,27 @@ footer {
     font-size: 1.75rem;
   }
 
+  #order-stack {
+    margin: 0 auto;
+    padding: 10rem 0;
+    width: 600px;
+    min-height: 600px;
+  }
+
   /* Base Styles */
   .section-block-information {
     padding-top: 0;
+  }
+
+  /* Sections */
+
+  .section-block-image {
+    max-width: 55rem;
+  }
+
+  .section-block-information {
+    max-width: 40rem;
+    padding-left: 5rem;
   }
 
 
