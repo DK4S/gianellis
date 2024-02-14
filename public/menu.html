@@ -1,17 +1,8 @@
-<!--<?php
-set_include_path('../private_php/');
-include ('events.php');
-include ('library.php');
-include ('page-head.php');
-include ('page-nav.php');
-include ('page-footer.php');
-?>-->
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Gianelli's Drive Thru</title>
-    <meta name="description" content="Gianelli's proudly serves hot dogs, burgers, italian beef and sausage, gyros, pasta, salads. Try our homemade family recipes today!">
+    <title>Gianelli's &#8211 Menu</title>
+    <meta name="description" content="Gianelli's Drive Thru &#8211 Our Menu">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Preload -->
@@ -41,16 +32,16 @@ include ('page-footer.php');
 
       <div id='navigation-group' class='flex'>
         <!-- Nav Cluster -->
-        <div id='ui-cluster' class='flex'>
+        <div id='ui-cluster' class='flex b-green'>
 
-          <div id='hamburgerStack' class='overlay'>
-            <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
-            <nav id='nav'>
+          <div id='hamburgerStack' class='overlay b-blue'>
+
+            <nav id='nav' class="b-yellow">
+              <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
               <ul>
-                <li><a href='../xxx'>Menu</a></li>
-                <li><a href='../xxx'>Catering</a></li>
-                <li><a href='../twl'>Hours & Location</a></li>
-                <li><a href='../xxx'>Contact Us</a></li>
+                <li><a href='menu.html'>Menu</a></li>
+                <li><a href='#hours'>Hours & Location</a></li>
+                <li><a href='contact.html'>Contact Us</a></li>
               </ul>
             </nav>
           </div>
@@ -61,9 +52,10 @@ include ('page-footer.php');
         <!-- Order Cluster -->
         <div id='order-cluster' class="button">
             <a href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
-            <div id="order-overlay">
-              <a href='javascript:void(0)' class='closebtn' onclick='closeOrderStack()'>&times;</a>
-                <div id="order-stack">
+            <div id="order-overlay" class="b-blue">
+
+                <div id="order-stack" class="b-yellow">
+                  <a href='javascript:void(0)' class='closebtn' onclick='closeOrderStack()'>&times;</a>
                   <ul>
                     <li><a href='../xxx'>Call Us</a></li>
                     <li><a href='../xxx'>Uber Eats</a></li>
@@ -81,30 +73,15 @@ include ('page-footer.php');
     <!-- Generate Nav Development END -->
 
     <main>
-        <div class="divide"></div>
+      <div class="divide"></div>
+      <h1 class="sr-only">Gianelli's Drive Thru Menu Page</h1>
+
+      <!-- Sections-->
+
+
+
     </main>
-<!--
-    <?php
-      //generateFooter();
-    ?>-->
-    <!-- Generate Footer Development START -->
-    <footer>
-      <div class='footer-link-container'>
-        <ul>
-          <li><a class ='footer-link' href='../about'>Our Story</a></li>
-          <li><a class ='footer-link' href='../privacy'>Privacy</a></li>
-        </ul>
-        <ul>
-          <li><a class ='footer-link' href=''>Contact Us</a></li>
-          <li>
-            <a class='footer-link' href='' target='_blank' rel='noopener' aria-label='twitter icon'><i class='fa-brands fa-twitter' ></i></a>
-          </li>
-        </ul>
 
-      </div>
-
-    </footer>
-    <!-- Generate Footer Development END -->
 
   <!-- Load Giannellis_v?.js-->
   <script src="GDTv-01.js"></script>
