@@ -137,11 +137,9 @@ header {
 nav, #order-stack {
   position: relative;
   background-color: white;
-  top: 10%;
-  width: 100%;
+  top: 0%;
+  height: 100%;
   text-align: center;
-  margin-top: 30px;
-  line-height: 4rem;
 }
 
 nav ul, #order-stack ul {
@@ -149,13 +147,35 @@ nav ul, #order-stack ul {
   flex-direction: column;
 }
 
+.order-link {
+  text-align: start;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 5rem 10rem;
+  font-size: 3rem;
 
-.overlay a, .fa-bars, #order-overlay a {
+
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-top: .5rem;
+  padding: 0 2rem;
+  display: block;
+
+}
+
+.order-link a{
+  text-decoration: none;
+  color: var(--main-charcoal);
+}
+
+
+.overlay a, .fa-bars {
+  /*Styles Hamburger Menu, including close X*/
   background: none;
   text-decoration: none;
   font-size: 3.5rem;
   line-height: 4rem;
-  margin-top: 1.5rem;
+  margin-top: .5rem;
   padding: 0;
   display: block;
 }
@@ -181,13 +201,12 @@ nav ul, #order-stack ul {
 
 .fa-bars {
   color: var(--main-green);
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 2rem;
-  margin-bottom: .4rem;
 }
 
 /* Order Button */
-.button a {
+.button {
   background: var(--alt-green);
   color: var(--main-charcoal);
   border-radius: 5px;
@@ -199,7 +218,7 @@ nav ul, #order-stack ul {
   transition: all ease-in-out 300ms;
 }
 
-.button a:hover {
+.button:hover {
   webkit-transform: translate(0px,-5px);
   transform: translate(0px,-5px);
 }
