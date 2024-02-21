@@ -61,13 +61,13 @@ include ('page-footer.php');
         <!-- Order Cluster -->
         <div id='order-cluster' >
             <a class="button" href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
-            <div id="order-overlay" class="b-blue">
-
-                <div id="order-stack" class="b-yellow">
-                  <a  href='javascript:void(0)' class='closebtn b-black' onclick='closeOrderStack()'>&times;</a>
-                  <ul class = 'b-orange'>
-                    <li class="order-link"><a href='../xxx'><img src ="images/UberEats-1-2.jpeg" alt="Doordash logo." class="b-orange"></img><div class="b-green">Call Us</div><span class="b-red">></span></a></li>
-                    <li class="order-link"><a href='../xxx'>Uber Eats</a></li>
+            <div id="order-overlay">
+                <div id="order-stack">
+                  <a  href='javascript:void(0)' class='order-stack-close' onclick='closeOrderStack()'>&times;</a>
+                  <h2 class="order-stack-title">Please Select Your Order Method</h2>
+                  <ul>
+                    <li class="order-link"><a href='tel:+8154554444'><img src ="images/Gianellis-logo.png" alt="Gianellis logo."></img><div class="order-link-text"><p>Call Us</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
+                    <li class="order-link"><a href='https://www.ubereats.com/en-US/chicago/food-delivery/gianellis-drive-thru/RtTOJVrhS7mHTrzGim-SCw/'><img src ="images/UberEats-1-2.jpeg" alt="Uber Eats logo." ></img><div class="order-link-text"><p>UberEats</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
                   </ul>
                 </div>
             </div>

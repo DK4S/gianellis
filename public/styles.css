@@ -73,7 +73,7 @@ a {
 }
 
 a:hover {
-  color: var(--main-gold);
+  /*color: var(--main-gold);*/
 }
 
 ul{
@@ -142,44 +142,82 @@ nav, #order-stack {
   text-align: center;
 }
 
+#order-stack {
+  padding-top: 5rem;
+}
+
 nav ul, #order-stack ul {
   display: flex;
   flex-direction: column;
 }
 
+
 .order-link {
-  text-align: start;
+
   border: 1px solid #959595;
   border-radius: 5px;
   width: 300px;
-  margin: 1rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   padding: 1.6rem;
 
-  font-size: 1pc;
-  font-weight: 700;
-  line-height: 2.7rem;
-  letter-spacing: -.15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
 
 }
 
 .order-link a{
   text-decoration: none;
   color: var(--main-charcoal);
+  display: flex;
+  justify-content: space-between;
+
+
 }
 
 .order-link img{
   width: 7.2rem;
 }
 
-.order-link span{
-  display: inline-block;
+.order-stack-title{
+  color: var(--text-black);
+  font-size: 1.75rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+
 }
 
-.order-link div{
-  display: inline-block;
+.order-link-text{
+  display: flex;
+  align-items: center;
+}
+
+.order-link-text p{
+  width: 12rem;
+  text-align: start;
+  vertical-align: bottom;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.15px;
+
+}
+
+.order-link-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.order-link-arrow img{
+  color: var(--main-charcoal);
+  height: 24px;
+  width: 24px;
+
+}
+
+.order-stack-close {
+  position: absolute;
+  text-decoration: none;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
 }
 
 
@@ -195,12 +233,12 @@ nav ul, #order-stack ul {
   display: block;
 }
 
-.overlay a:hover, #ui-cluster span:hover{
+.overlay a:hover, #ui-cluster span:hover, .order-link:hover{
     -webkit-transform: translate(0px,-3px);
     transform: translate(0px,-3px);
 }
 
-.overlay .closebtn, #order-overlay .closebtn {
+.overlay .closebtn {
   float: right;
   /*
   position: absolute;
@@ -420,10 +458,11 @@ footer {
   }
 
   #order-stack {
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 10rem 0;
     width: 600px;
     min-height: 600px;
+
   }
 
   /* Base Styles */
