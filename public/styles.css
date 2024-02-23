@@ -74,7 +74,7 @@ a {
 }
 
 a:hover {
-  /*color: var(--main-gold);*/
+  color: var(--main-green);
 }
 
 ul{
@@ -310,6 +310,11 @@ header {
   align-self: start;
 }
 
+.menu-image {
+  border: 3px solid black;
+  padding: .75rem;
+}
+
 .section-block-information {
   margin: 0 auto;
   margin-top: 1.5rem;
@@ -399,6 +404,8 @@ footer {
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
+  padding-top: 4rem;
+  border-top: 2px solid var(--text-lightgray);
   padding-bottom: 3rem;
   max-width: 750px;
 }
@@ -411,12 +418,14 @@ footer {
 }
 
 
-.footer-link:link, .footer-link:visited {
+.footer-link:link, .footer-link:visited, .footer-address {
   color: var(--main-charcoal);
   font-size: 1.3rem;
   line-height: 1.3rem;
   text-decoration: none;
 }
+
+
 
 
 /* Responsive Screen Breaks */
@@ -449,13 +458,16 @@ footer {
     padding-left: 0;
     width: 95vw;
     max-width: 75rem;
+
   }
 
   .footer-link-title{
     font-size: 2rem;
   }
 
-  .footer-link:link {
+  .footer-link:link, .footer-address {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    line-height: 1.75rem;
     font-size: 1.5rem;
   }
 
