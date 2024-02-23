@@ -1,13 +1,25 @@
+<!--<?php
+set_include_path('../private_php/');
+include ('events.php');
+include ('library.php');
+include ('page-head.php');
+include ('page-nav.php');
+include ('page-footer.php');
+?>-->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Gianelli's Menu</title>
-    <meta name="description" content="Gianelli's Drive Thru - Our Menu">
+    <title>Gianelli's Drive Thru</title>
+    <meta name="description" content="Gianelli's proudly serves hot dogs, burgers, italian beef and sausage, gyros, pasta, salads. Try our homemade family recipes today!">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Preload -->
-    <link rel="preload" as="style" href="styles.css">
+
     <!-- Fonts, Symbols, CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/svg" href="images/Gianellis-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css" type="text/css">
@@ -31,34 +43,33 @@
       </div>
 
       <div id='navigation-group' class='flex'>
+
         <!-- Nav Cluster -->
-        <div id='ui-cluster' class='flex b-green'>
-
-          <div id='hamburgerStack' class='overlay b-blue'>
-
-            <nav id='nav' class="b-yellow">
-              <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
+        <div id='ui-cluster'>
+          <span onclick='openNav()'><i class='fa fa-bars'></i></span>
+          <div id='hamburgerStack' class='overlay'>
+            <nav id='navigation-stack'>
+              <a href='javascript:void(0)' id='navigation-stack-close' onclick='closeNav()'>&times;</a>
               <ul>
-                <li><a href='menu.html'>Menu</a></li>
-                <li><a href='#hours'>Hours & Location</a></li>
-                <li><a href='contact.html'>Contact Us</a></li>
+                <li class="navigation-link"><a href='menu.html'>Menu</a></li>
+                <li class="navigation-link"><a href='gianellis-index.html#hours-location' onclick='closeNav()'>Hours & Location</a></li>
+                <li class="navigation-link"><a href='contact.html'>Get in Touch</a></li>
               </ul>
             </nav>
           </div>
-          <span onclick='openNav()'><i class='fa fa-bars'></i></span>
-
         </div>
 
         <!-- Order Cluster -->
-        <div id='order-cluster' class="button">
-            <a href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
-            <div id="order-overlay" class="b-blue">
-
-                <div id="order-stack" class="b-yellow">
-                  <a href='javascript:void(0)' class='closebtn' onclick='closeOrderStack()'>&times;</a>
+        <div id='order-cluster' >
+            <a class="button" href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
+            <div id="order-overlay">
+                <div id="order-stack">
+                  <a  href='javascript:void(0)' id='order-stack-close' onclick='closeOrderStack()'>&times;</a>
+                  <h2 class="order-stack-title">Please Select Your Order Method</h2>
                   <ul>
-                    <li><a href='../xxx'>Call Us</a></li>
-                    <li><a href='../xxx'>Uber Eats</a></li>
+                    <li class="order-link"><a href='tel:+8154554444'><img src ="images/Gianellis-logo.png" alt="Gianellis logo."></img><div class="order-link-text"><p>Call Us</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
+                    <li class="order-link"><a href='https://www.grubhub.com/restaurant/gianellis-drive-thru-3111-il-route-176-crystal-lake/1659693'><img src ="images/grubhub_logo.jpeg" alt="Grubhub logo." ></img><div class="order-link-text"><p>Grubhub</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
+                    <li class="order-link"><a href='https://www.ubereats.com/en-US/chicago/food-delivery/gianellis-drive-thru/RtTOJVrhS7mHTrzGim-SCw/'><img src ="images/UberEats-1-2.jpeg" alt="Uber Eats logo." ></img><div class="order-link-text"><p>UberEats</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
                   </ul>
                 </div>
             </div>
@@ -74,14 +85,57 @@
 
     <main>
       <div class="divide"></div>
-      <h1 class="sr-only">Gianelli's Drive Thru Menu Page</h1>
+      <h1 class="sr-only">Gianelli's Drive Thru Menu</h1>
 
       <!-- Sections-->
 
+      <!-- Sample Section #1 -->
+      <section class="page-block b-blue">
+        <h2 class="sr-only">Menu Images - screen readable menu is in development. Give us a call if you need assistance.</h2>
+        <div class="standard-container b-red">
+          <a href="" class="b-green"><img class="section-block-image" src="images/Vegetarian_greek_pita-768x576.jpg" alt=""/></a>
+        </div>
+      </section>
+
+      <!-- Sample Section #2 -->
+      <section class="page-block b-blue">
+        <h2 class="sr-only">Sample Section #3</h2>
+        <div class="standard-container b-red">
+          <a href="" class="b-green"><img class="section-block-image" src="images/Gianellis_building.jpg" alt=""/></a>
+          <div class="section-block-information b-orange">
+            <p class="section-block-title">
+              A Crystal Lake Classic
+            </p>
+            <p class="section-block-body">
+              Want to drive thru? We got you! Feel like dining in? We're ready for that, too. Enjoy our cozy dining room and outdoor seating if the weather is nice. Grab it to go or stick around, the choice is yours!
+            </p>
+          </div>
+        </div>
+      </section>
 
 
+      <div class="divide"></div>
     </main>
+<!--
+    <?php
+      //generateFooter();
+    ?>-->
+    <!-- Generate Footer Development START -->
+    <footer>
+      <div class='footer-link-container'>
+        <ul>
+          <li><a class ='footer-link' href='../privacy'>Privacy</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a class='footer-link' href='' target='_blank' rel='noopener' aria-label='twitter icon'><i class='fa-brands fa-twitter' ></i></a>
+          </li>
+        </ul>
 
+      </div>
+
+    </footer>
+    <!-- Generate Footer Development END -->
 
   <!-- Load Giannellis_v?.js-->
   <script src="GDTv-01.js"></script>

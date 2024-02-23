@@ -14,9 +14,12 @@ include ('page-footer.php');
     <meta name="description" content="Gianelli's proudly serves hot dogs, burgers, italian beef and sausage, gyros, pasta, salads. Try our homemade family recipes today!">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Preload -->
-    <link rel="preload" as="style" href="styles.css">
+
     <!-- Fonts, Symbols, CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/svg" href="images/Gianellis-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css" type="text/css">
@@ -40,22 +43,20 @@ include ('page-footer.php');
       </div>
 
       <div id='navigation-group' class='flex'>
+
         <!-- Nav Cluster -->
-        <div id='ui-cluster' class='flex b-green'>
-
-          <div id='hamburgerStack' class='overlay b-blue'>
-
-            <nav id='nav' class="b-yellow">
-              <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
+        <div id='ui-cluster'>
+          <span onclick='openNav()'><i class='fa fa-bars'></i></span>
+          <div id='hamburgerStack' class='overlay'>
+            <nav id='navigation-stack'>
+              <a href='javascript:void(0)' id='navigation-stack-close' onclick='closeNav()'>&times;</a>
               <ul>
-                <li><a href='menu.html'>Menu</a></li>
-                <li><a href='#hours'>Hours & Location</a></li>
-                <li><a href='contact.html'>Contact Us</a></li>
+                <li class="navigation-link"><a href='menu.html'>Menu</a></li>
+                <li class="navigation-link"><a href='gianellis-index.html#hours-location' onclick='closeNav()'>Hours & Location</a></li>
+                <li class="navigation-link"><a href='contact.html'>Get in Touch</a></li>
               </ul>
             </nav>
           </div>
-          <span onclick='openNav()'><i class='fa fa-bars'></i></span>
-
         </div>
 
         <!-- Order Cluster -->
@@ -63,10 +64,11 @@ include ('page-footer.php');
             <a class="button" href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
             <div id="order-overlay">
                 <div id="order-stack">
-                  <a  href='javascript:void(0)' class='order-stack-close' onclick='closeOrderStack()'>&times;</a>
+                  <a  href='javascript:void(0)' id='order-stack-close' onclick='closeOrderStack()'>&times;</a>
                   <h2 class="order-stack-title">Please Select Your Order Method</h2>
                   <ul>
                     <li class="order-link"><a href='tel:+8154554444'><img src ="images/Gianellis-logo.png" alt="Gianellis logo."></img><div class="order-link-text"><p>Call Us</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
+                    <li class="order-link"><a href='https://www.grubhub.com/restaurant/gianellis-drive-thru-3111-il-route-176-crystal-lake/1659693'><img src ="images/grubhub_logo.jpeg" alt="Grubhub logo." ></img><div class="order-link-text"><p>Grubhub</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
                     <li class="order-link"><a href='https://www.ubereats.com/en-US/chicago/food-delivery/gianellis-drive-thru/RtTOJVrhS7mHTrzGim-SCw/'><img src ="images/UberEats-1-2.jpeg" alt="Uber Eats logo." ></img><div class="order-link-text"><p>UberEats</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
                   </ul>
                 </div>
@@ -90,14 +92,14 @@ include ('page-footer.php');
       <!-- Sample Section #1 -->
       <section class="page-block">
         <h2 class="sr-only">Sample Section #1</h2>
-        <div class="standard-container b-orange">
-          <a href=""><img class="section-block-image b-purple" src="images/Vegetarian_greek_pita-400x284.jpg" alt=""/></a>
-          <div class="section-block-information b-yellow">
-            <p class="section-block-title b-blue">
-              We Make Catering Easy!
+        <div class="standard-container">
+          <a href=""><img class="section-block-image" src="images/Vegetarian_greek_pita-768x576.jpg" alt=""/></a>
+          <div class="section-block-information">
+            <p class="section-block-title">
+              Good food done right.
             </p>
-            <p class="section-block-bodyb-green">
-              Gianelli's can cater your next business event or holiday party. Call us today to make your reservation.
+            <p class="section-block-body">
+              Food is important to us. We proudly serve delicious Kronos gyros and Vienna hot dogs, and our burgers are handmade. Feeling like something fresh? We've got that, too!
             </p>
           </div>
         </div>
@@ -105,20 +107,44 @@ include ('page-footer.php');
 
       <!-- Sample Section #2 -->
       <section class="page-block">
-        <h2 class="sr-only">Sample Section #2</h2>
+        <h2 class="sr-only">Sample Section #3</h2>
         <div class="standard-container">
           <a href=""><img class="section-block-image" src="images/Gianellis_building.jpg" alt=""/></a>
           <div class="section-block-information">
             <p class="section-block-title">
-              Good food done right.
+              A Crystal Lake Classic
             </p>
             <p class="section-block-body">
-              You’re sure to love our charbroiled cracked fennel Italian sausage served with our signature red sauce and green peppers. All of our burgers are handmaded fresh daily. We proudly serve delicious Kronos gyros and Vienna hot dogs. Gianelli’s is a warm, clean and comfortable place to bring your family.
+              Want to drive thru? We got you! Feel like dining in? We're ready for that, too. Enjoy our cozy dining room and outdoor seating if the weather is nice. Grab it to go or stick around, the choice is yours!
             </p>
           </div>
         </div>
       </section>
 
+      <!-- Hours & Location -->
+
+      <section id="hours-location" class="page-block">
+        <h2 class="visible-section-title">Hours & Location</h2>
+        <div class="standard-container">
+          <!-- Hours -->
+          <div class="section-block-hours">
+            <p class="section-block-hours-title">We Are Open</p>
+            <div class="section-block-hours-body"><p>Mon - Sat</p><p>10:30am - 9:00pm</p></div>
+            <div class="section-block-hours-body"><p>Sun</p><p>11:00am - 6:00pm</p></div>
+          </div>
+
+
+          <!--Location Map-->
+          <div class="section-block-image">
+            <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.8716849287125!2d-88.26094798827263!3d42.25991267108226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f6ce915ab17a1%3A0x348037984ea8759c!2sGianelli&#39;s%20Drive%20Thru!5e0!3m2!1sen!2sus!4v1708615833023!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+
+        </div>
+
+      </section>
+
+      <div class="divide"></div>
     </main>
 <!--
     <?php
@@ -128,11 +154,9 @@ include ('page-footer.php');
     <footer>
       <div class='footer-link-container'>
         <ul>
-          <li><a class ='footer-link' href='../about'>Our Story</a></li>
           <li><a class ='footer-link' href='../privacy'>Privacy</a></li>
         </ul>
         <ul>
-          <li><a class ='footer-link' href=''>Contact Us</a></li>
           <li>
             <a class='footer-link' href='' target='_blank' rel='noopener' aria-label='twitter icon'><i class='fa-brands fa-twitter' ></i></a>
           </li>

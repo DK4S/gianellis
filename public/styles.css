@@ -12,8 +12,9 @@
   --main-cream: #f7f6f5;
   --main-gold: #f5df4d;
   --main-charcoal: #292929;
-  --text-black: rgba(0,0,0,1);
-  --text-gray: rgba(29,29,29,.75);
+  --text-charcoal: rgba(0,0,0,.8);
+  --text-black: rgba(0,0,0,.98);
+  --text-gray: rgba(29,29,29,.90);
   --text-lightgray: rgba(29,29,29,.2);
   --text-white: #f7f6f5;
   --nav-overlay: rgba(0,0,0, 0.9);
@@ -81,7 +82,6 @@ ul{
 }
 
 h1, h2, {
-  font-family: "Special Elite", Courier, monospace;
   color: var(--main-charcoal);
   font-size: 2.25rem;
   line-height: 3rem;
@@ -134,34 +134,31 @@ header {
   background-color: rgba(0,0,0, 0.6);
 }
 
-nav, #order-stack {
+#navigation-stack, #order-stack {
   position: relative;
   background-color: white;
   top: 0%;
   height: 100%;
   text-align: center;
-}
-
-#order-stack {
   padding-top: 5rem;
 }
 
-nav ul, #order-stack ul {
+
+#navigation-stack ul, #order-stack ul {
   display: flex;
   flex-direction: column;
 }
 
 
-.order-link {
-
-  border: 1px solid #959595;
-  border-radius: 5px;
+.order-link, .navigation-link {
   width: 300px;
+}
+
+.order-link {
   margin: 2rem auto 0 auto;
   padding: 1.6rem;
-
-
-
+  border: 1px solid #959595;
+  border-radius: 5px;
 }
 
 .order-link a{
@@ -169,8 +166,6 @@ nav ul, #order-stack ul {
   color: var(--main-charcoal);
   display: flex;
   justify-content: space-between;
-
-
 }
 
 .order-link img{
@@ -182,7 +177,6 @@ nav ul, #order-stack ul {
   font-size: 1.75rem;
   font-weight: 600;
   padding-bottom: 2rem;
-
 }
 
 .order-link-text{
@@ -212,18 +206,19 @@ nav ul, #order-stack ul {
 
 }
 
-.order-stack-close {
+#order-stack-close, #navigation-stack-close {
   position: absolute;
   text-decoration: none;
   top: 2rem;
   right: 2rem;
   font-size: 3rem;
+  line-height: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 
-
-.overlay a, .fa-bars {
-  /*Styles Hamburger Menu, including close X*/
+.fa-bars {
   background: none;
   text-decoration: none;
   font-size: 3.5rem;
@@ -233,19 +228,30 @@ nav ul, #order-stack ul {
   display: block;
 }
 
-.overlay a:hover, #ui-cluster span:hover, .order-link:hover{
+.navigation-link {
+  /*Styles Hamburger Menu*/
+  background: none;
+  text-align: start;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.15px;
+  padding-left: 3rem;
+  display: block;
+}
+
+.navigation-link a{
+  text-decoration: none;
+}
+
+
+
+.navigation-link:hover, #ui-cluster span:hover, .order-link:hover{
     -webkit-transform: translate(0px,-3px);
     transform: translate(0px,-3px);
 }
 
-.overlay .closebtn {
-  float: right;
-  /*
-  position: absolute;
-  top: 4rem;
-  right: 4rem;
-  font-size: 6rem;*/
-}
+
 
 #ui-cluster{
   display: flex;
@@ -315,9 +321,24 @@ nav ul, #order-stack ul {
   max-width: 70rem;
 }
 
-.section-block-title {
-  font-size: 2.0rem;
-  font-weight: bold;
+.visible-section-title{
+  color: var(--text-charcoal);
+  font-family: "Alfa Slab One", serif;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 3rem;
+  border-top: 2px solid var(--text-charcoal);
+  border-bottom: 2px solid var(--text-charcoal);
+}
+
+.section-block-title, .section-block-hours-title {
+  color: var(--text-charcoal);
+  font-family: "Alfa Slab One", serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
   padding-bottom: 1.5rem;
 }
 
@@ -325,12 +346,49 @@ nav ul, #order-stack ul {
   font-size: 1.5rem;
 }
 
+.section-block-hours{
+  padding: 1rem;
+  border: 2px solid var(--text-charcoal);
+  margin-bottom: 3rem;
+  max-height: 125px;
+}
+
+.section-block-hours-title {
+  text-align: center;
+  width: 35rem;
+}
+
+.section-block-hours-body {
+  display: flex;
+  justify-content: space-between;
+}
+.section-block-hours-body p{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.75rem;
+  width: 170px;
+  padding-top: .5rem;
+}
+
+
+.location-map {
+  width: 35rem;
+  height: 30rem;
+}
+
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+
 /* Footer */
 
 footer {
 
   /*background-color: #f7f6f5;*/
-  background-color: rgb(0, 140, 69, .20);
+  /*background-color: rgb(0, 140, 69, .20);*/
   margin-top: 1.25rem;
   padding-top: 2rem;
   line-height: 2rem;
@@ -385,8 +443,6 @@ footer {
     margin: 0 1rem;
   }
 
-
-
   /* Footer */
 
   .footer-link-container{
@@ -420,25 +476,39 @@ footer {
 }
 
 
+
+@media screen and (min-width: 550px){
+  .location-map {
+    width: 45rem;
+    height: 40rem;
+  }
+
+}
+
 @media screen and (min-width: 900px) {
 
   /*Nav styles for when displayed on wide screens w/o JavaScript overlay*/
 
-  nav {
+  #navigation-stack {
     margin: 0;
+    padding: 0;
     top: auto;
     width: auto;
+    display: flex;
+    align-items: flex-end;
   }
 
-  nav ul {
+  #navigation-stack ul {
     flex-direction: row;
+
   }
+
 
   .fa-bars {
     display: none;
   }
 
-  .overlay .closebtn {
+  #navigation-stack-close {
     display: none;
   }
 
@@ -450,11 +520,18 @@ footer {
     background-color: inherit;
   }
 
-  .overlay a {
+  .navigation-link {
+    width: auto;
     color: var(--main-charcoal);
-    text-align: center;
-    padding: 1.5rem 1.75rem;
+    padding: .8rem 1.75rem;
     font-size: 1.75rem;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0;
+
+
+
+
   }
 
   #order-stack {
@@ -462,7 +539,6 @@ footer {
     padding: 10rem 0;
     width: 600px;
     min-height: 600px;
-
   }
 
   /* Base Styles */
@@ -470,6 +546,13 @@ footer {
     padding-top: 0;
   }
 
+
+
+
+}
+
+
+@media screen and (min-width: 1100px) {
   /* Sections */
 
   .section-block-image {
@@ -481,6 +564,9 @@ footer {
     padding-left: 5rem;
   }
 
+  .section-block-hours {
+    margin: auto 0;
+  }
 
 }
 
