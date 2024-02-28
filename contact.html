@@ -1,0 +1,138 @@
+<!--<?php
+set_include_path('../private_php/');
+include ('events.php');
+include ('library.php');
+include ('page-head.php');
+include ('page-nav.php');
+include ('page-footer.php');
+?>-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Gianelli's Drive Thru</title>
+    <meta name="description" content="Gianelli's proudly serves hot dogs, burgers, italian beef and sausage, gyros, pasta, salads. Try our homemade family recipes today!">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts, Symbols, CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg" href="images/Gianellis-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+
+  <body>
+
+<!--
+    <?php
+    //  generateNav();
+    ?>-->
+    <!-- Generate Nav Development START -->
+
+
+    <!-- Page Header -->
+    <header id='page-header'>
+
+      <!-- Logo -->
+      <div id='logo-container'>
+        <a href='index.html'><img id='logo-header' class='logo-header' src='images/Gianellis-logo.png' alt='Gianelli&apos;s Logo, our name with green and red paintbrush strokes evoking the Italian flag.'/></a>
+      </div>
+
+      <div id='navigation-group' class='flex'>
+
+        <!-- Nav Cluster -->
+        <div id='ui-cluster'>
+          <span onclick='openNav()'><i class='fa fa-bars'></i></span>
+          <div id='hamburgerStack' class='overlay'>
+            <nav id='navigation-stack'>
+              <a href='javascript:void(0)' id='navigation-stack-close' onclick='closeNav()'>&times;</a>
+              <ul>
+                <li class="navigation-link"><a href='menu.html'>Menu</a></li>
+                <li class="navigation-link"><a href='index.html#hours-location'>Hours & Location</a></li>
+                <li class="navigation-link"><a href='contact.html'>Get in Touch</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Order Cluster -->
+        <div id='order-cluster' >
+            <a class="button" href="javascript:void(0)" onclick='openOrderStack()'>Order Now</a>
+            <div id="order-overlay">
+                <div id="order-stack">
+                  <a  href='javascript:void(0)' id='order-stack-close' onclick='closeOrderStack()'>&times;</a>
+                  <h2 class="order-stack-title">Please Select Your Order Method</h2>
+                  <ul>
+                    <li class="order-link"><a href='tel:+8154554444'><img src ="images/Gianellis-logo.png" alt="Gianellis logo."></img><div class="order-link-text"><p>Call Us</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
+                    <li class="order-link"><a href='https://www.grubhub.com/restaurant/gianellis-drive-thru-3111-il-route-176-crystal-lake/1659693'><img src ="images/grubhub_logo.jpeg" alt="Grubhub logo." ></img><div class="order-link-text"><p>Grubhub</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
+                    <li class="order-link"><a href='https://www.ubereats.com/en-US/chicago/food-delivery/gianellis-drive-thru/RtTOJVrhS7mHTrzGim-SCw/'><img src ="images/UberEats-1-2.jpeg" alt="Uber Eats logo." ></img><div class="order-link-text"><p>UberEats</p></div><div class="order-link-arrow"><img src ="images/right-arrow.svg" alt="right arrow" /></div></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- Generate Nav Development END -->
+
+    <main>
+      <div class="divide"></div>
+      <h1 class="sr-only">Gianelli's Drive Thru Index Page</h1>
+
+      <!-- Sample Section #1 -->
+      <section class="page-block">
+        <h2 class="visible-section-title">Get In Touch</h2>
+        <div class="standard-container">
+          <a href=""><img class="section-block-image" src="images/good-food.jpg" alt="Our condiment counter, with napkin dispensers, silverware, and straws. A sign says mama's good food."/></a>
+          <div class="section-block-information">
+            <p class="section-block-title">
+              We value your feedback.
+            </p>
+            <p class="section-block-body">
+              Follow us on <a class='' href='https://www.facebook.com/gianellisdrivethru/' target='_blank' rel='noopener' aria-label='facebook icon'><i class='fa-brands fa-facebook-square'></i></a> or <a href="mailto:contact.gianellis@gmail.com">send us an email</a>.
+
+
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+<!--
+    <?php
+      //generateFooter();
+    ?>-->
+    <!-- Generate Footer Development START -->
+    <footer>
+      <div class='footer-link-container'>
+        <ul>
+          <li class="footer-address">Gianelli's Drive Thru</li>
+          <li class="footer-address">3111 Il-176</li>
+          <li class="footer-address">Crystal Lake, IL 60014</li>
+        </ul>
+        <ul>
+          <li><a class ='footer-link' href='../privacy'>Privacy</a></li>
+          <br>
+          <li><a class='footer-link' href='https://www.facebook.com/gianellisdrivethru/' target='_blank' rel='noopener' aria-label='facebook icon'><i class='fa-brands fa-facebook-square'></i></a></li>
+        </ul>
+
+      </div>
+
+    </footer>
+    <!-- Generate Footer Development END -->
+
+  <!-- Load Giannellis_v?.js-->
+  <script src="GDTv-01.js"></script>
+
+
+  </body>
+</html>
