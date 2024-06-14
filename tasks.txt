@@ -12,5 +12,5 @@ This is the task list for analytics integration for GDT.
 8. Update Consent Overlay html                  COMPLETE
 9. Add Privacy Policy & Update Links            COMPLETE
 10. Add Marketing Cookies Functionality
-11. Update gtag property keys
-12. Test Live
+11. Update gtag property keys                   COMPLETE
+12. Test Live                                   COMPLETE
