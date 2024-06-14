@@ -16,10 +16,25 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
   </head>
 
+    <!-- GTAG -->
+    <!-- Copy and paste it in the code of every page of your website, immediately after the <head> element. Don’t add more than one Google tag to each page. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PY38CP7KT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+      gtag('config', 'G-9PY38CP7KT');
+    </script>
+
   <body>
 
-    <!-- Generate Nav Development START -->
-
+   <!--  Page Navigation Clusters  -->
 
     <!-- Page Header -->
     <header id='page-header'>
@@ -61,14 +76,10 @@
                 </div>
             </div>
         </div>
-
       </div>
 
     </header>
 
-
-
-    <!-- Generate Nav Development END -->
 
     <main>
       <div class="divide"></div>
@@ -80,7 +91,7 @@
       <section class="page-block">
         <h2 class="sr-only">Sample Section #1</h2>
         <div class="standard-container">
-          <a href=""><img class="section-block-image" src="images/Vegetarian_greek_pita-768x576.jpg" alt=""/></a>
+          <a href=""><img class="section-block-image" src="images/Vegetarian_greek_pita-768x576.jpg" alt="Delicious pita sandwich in a red basket."/></a>
           <div class="section-block-information">
             <p class="section-block-title">
               Good food done right.
@@ -96,7 +107,7 @@
       <section class="page-block">
         <h2 class="sr-only">Sample Section #3</h2>
         <div class="standard-container">
-          <a href=""><img class="section-block-image" src="images/Gianellis_building.jpg" alt=""/></a>
+          <a href=""><img class="section-block-image" src="images/Gianellis_building.jpg" alt="View of the drive thru restaurant on a sunny day."/></a>
           <div class="section-block-information">
             <p class="section-block-title">
               A Crystal Lake Classic
@@ -109,7 +120,6 @@
       </section>
 
       <!-- Hours & Location -->
-
       <section id="hours-location" class="page-block">
         <h2 class="visible-section-title">Hours & Location</h2>
         <div class="standard-container">
@@ -124,15 +134,12 @@
           <div class="section-block-image">
             <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.8716849287125!2d-88.26094798827263!3d42.25991267108226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f6ce915ab17a1%3A0x348037984ea8759c!2sGianelli&#39;s%20Drive%20Thru!5e0!3m2!1sen!2sus!4v1708615833023!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-
-
         </div>
-
       </section>
 
     </main>
 
-    <!-- Generate Footer Development START -->
+    <!-- Footer  -->
     <footer>
       <div class='footer-link-container'>
         <ul>
@@ -145,15 +152,86 @@
           <br>
           <li><a class='footer-link' href='https://www.facebook.com/gianellisdrivethru/' target='_blank' rel='noopener' aria-label='facebook icon'><i class='fa-brands fa-facebook-square'></i></a></li>
         </ul>
-
       </div>
-
     </footer>
-    <!-- Generate Footer Development END -->
+   
+  </body>
+
+  <!-- Privacy Settings Overlay -->
+  <div id="privacy-settings" class="privacy-overlay hide">
+    <div class="privacy-controls">
+      <div class="privacy-container">
+        <h1>Wow This Is Privacy!</h1>
+        <div class="privacy-controls-entry">
+          <p>Gianell's values your privacy. By law we are allowed to store information on your device that is required for the operation of this site, but we have to ask your permission for everything else.</p>
+        </div>
+        <div class="divide"></div>
+        <div class="privacy-controls-entry">
+          <div class="flex">
+            <button id="menu-necessary" class="privacy-controls-entry-title drop-menu-closed" onclick="toggleVisible('cookie-expand-necessary'); toggleMenuCarrot('menu-necessary');">Necessary</button>
+            <div class="toggle-container toggle-cookies">
+              <input type="checkbox" class="toggle-input" id="cookie-necessary">
+              <label for="cookie-necessary" class="toggle-on"></label>
+            </div>
+          </div>
+          <p>Necessary cookies make website useable by enabling basic functions. They cannot be turned off.</p>
+          <div id="cookie-expand-necessary" class="cookie-expand-container hide">
+            <div>
+              <p>Gianelli's Drive Thru</p>
+              <br>
+              <p><span class="bold">NONE</span></p>
+              <p><span class="bold">Function:</span></p>
+              <p><span class="bold">Expiry: </span>Not Active</p>
+              <p><span class="type">Type: </span>N/A</p>
+            </div>
+          </div>
+        </div>
+        <div class="divide"></div>
+        <div class="privacy-controls-entry">
+          <div class="flex">
+            <button id="menu-statistics" class="privacy-controls-entry-title drop-menu-closed" onclick="toggleVisible('cookie-expand-statistics'); toggleMenuCarrot('menu-statistics');" >Statistics</button>
+            <div class="toggle-container toggle-cookies">
+              <input type="checkbox" class="toggle-input" id="cookie-statistics" checked/>
+              <label for="cookie-statistics" class="toggle"></label>
+            </div>
+          </div>
+  
+          <p>Statistics cookies help us understand how users interact with our website. Information is reported anonymously.</p>
+          <div id="cookie-expand-statistics" class="cookie-expand-container hide">
+            <div>
+              <p>Google</p>
+              <br>
+              <p><span class="bold">gtag</span> - Registers user's behaviour on the website.</p>
+              <p><span class="bold">Expiry: </span>Session</p>
+              <p><span class="type">Type: </span>Pixel</p>
+            </div>
+          </div>
+        </div>
+        <div class="divide"></div>
+        <div class="privacy-controls-entry">
+          <div class="flex">
+            <button id="menu-marketing" class="privacy-controls-entry-title drop-menu-closed" onclick="toggleVisible('cookie-expand-marketing'); toggleMenuCarrot('menu-marketing');">Marketing</button>
+            <div class="toggle-container toggle-cookies">
+              <input type="checkbox" class="toggle-input" id="cookie-marketing">
+              <label for="cookie-marketing" class="toggle-off"></label>
+            </div>
+          </div>
+          <p>Marketing cookies track users across the internet.</p>
+          <div id="cookie-expand-marketing" class="cookie-expand-container hide">
+          </div>
+        </div>
+      </div>
+      <div class="privacy-controls-consent"><button class="button consent-button" onclick="updateConsent(document.getElementById('cookie-statistics').checked); toggleVisible('privacy-settings');">Accept Selected</button></div>
+    </div>
+  </div>
+  
+  <!-- Privacy Banner Dev Area -->
+  <div id="privacy-banner" class="privacy-banner hide">
+    <div><p>We use cookies to ensure that we give you the best experience on our website.</p></div>
+    <div><a href="follyxo.com" class="privacy-banner-txt-1">PRIVACY POLICY</a><button class="privacy-banner-buttons" onclick="toggleVisible('privacy-settings'); toggleVisible('privacy-banner');">SETTINGS</button><button class="privacy-banner-buttons" onclick="updateConsent(true); toggleVisible('privacy-banner');">ACCEPT<i class="fa-solid fa-check privacy-banner-check"></i></button></div>
+  </div>
 
   <!-- Load Giannellis_v?.js-->
   <script src="GDTv-01.js"></script>
 
-
-  </body>
 </html>

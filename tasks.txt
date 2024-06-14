@@ -1,0 +1,16 @@
+
+
+This is the task list for analytics integration for GDT.
+
+1. Integrate JS code with GDTv-0?.js            COMPLETE
+2. Add banner.css code to styles.css            COMPLETE
+3. Add gtag code to HTML                        COMPLETE
+4. Add Consent Funnel code to HTML              COMPLETE
+5. Clean HTML comments                          COMPLETE
+6. Test locally                                 COMPLETE
+7. Fix Consent Button css                       COMPLETE
+8. Update Consent Overlay html                  COMPLETE
+9. Add Privacy Policy & Update Links
+10. Add Marketing Cookies Functionality
+11. Update gtag property keys
+12. Test Live
