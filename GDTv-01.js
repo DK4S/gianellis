@@ -68,13 +68,13 @@ function consentState( state ){
     //console.log(window.dataLayer);
 
   } else if (state.cookie_banner.active === false && state.cookie_banner.consent.statistics === true){
-    console.log("consent banner inactive, statistics active, will update gtag state.");
+    //console.log("consent banner inactive, statistics active, will update gtag state.");
     gtagUpdate( state );
     //console.log("window dataLayer: ");
     //console.log(window.dataLayer);
 
   } else if (state.cookie_banner.active === false && state.cookie_banner.consent.statistics === false){
-    console.log("consent banner inactive, statistics denied, will not update gtag state.");
+    //console.log("consent banner inactive, statistics denied, will not update gtag state.");
     //console.log("window dataLayer: ");
     //console.log(window.dataLayer);
   } else {
@@ -100,25 +100,25 @@ function updateConsent( selection ){
 function gtagUpdate( state ){
   // Is called by updateConsent function after localStorage event state update.
   if (state.cookie_banner.consent.statistics === true){
-    console.log("gtagUpdate will turn gtag ON:")
+    //console.log("gtagUpdate will turn gtag ON:")
     gtag('consent', 'update', {
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
         'ad_storage': 'denied',
         'analytics_storage': 'granted'
       });
-      console.log("window dataLayer: ");
-      console.log(window.dataLayer);
+      //console.log("window dataLayer: ");
+      //console.log(window.dataLayer);
   } else if (state.cookie_banner.consent.statistics === false){
-    console.log(`gtagUpdate will keep gtag OFF:`);
+    //console.log(`gtagUpdate will keep gtag OFF:`);
     /*gtag('consent', 'update', {
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
         'ad_storage': 'denied',
         'analytics_storage': 'denied'
       });*/
-    console.log("window dataLayer: ");
-    console.log(window.dataLayer);
+    //console.log("window dataLayer: ");
+    //console.log(window.dataLayer);
   } else {
     console.log("Error: gtagUpdate failed.");
   }
