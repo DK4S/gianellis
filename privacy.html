@@ -31,6 +31,32 @@
         gtag('config', 'G-WSZSG0WWM0');
       </script>
 
+  <script>
+  (function(e, t, r, n) {
+     var o, c, s;
+     o = e.document, c = t.children[0], s = o.createElement("script"), e.StorefrontSDKObject = "StorefrontSDK", e[e.StorefrontSDKObject] = {
+         executeCommand: function(t, r) {
+             e[e.StorefrontSDKObject].buffer.push([t, r])
+         },
+         buffer: []
+     }, s.async = 1, s.src ='https://web-apps.cdn4dd.com/webapps/sdk-storefront/latest/sdk.js' , t.insertBefore(s, c)
+ })(window, document.head);
+ StorefrontSDK.executeCommand('renderFloatingButton', {
+     businessId: 1234,
+     businessSlug: 'MerchantName',
+     floatingBar: true,
+     position: 'bottom',
+     buttonAlignment: 'center',
+     backgroundColor: 'transparent',
+     buttonBackgroundColor: '#D92128',
+     borderColor: 'transparent',
+     buttonText: 'Order Pickup & Delivery',
+     showModal: true
+   } 
+ )
+ </script>
+
+  
   <body>
 
     <!--  Page Navigation Clusters  -->
@@ -90,7 +116,7 @@
         <h2 class="visible-section-title">Privacy Policy</h2>
         <div class="standard-container">
             <p>General Statement: 
-            Yo! We designed this website to be minimally invasive to your privacy. We use normal web technologies, such as Google or Cloudflare fonts, common programming libraries such as JQuery, and Google Maps. In our cookie consent settings we do ask your permission to use an analytics pixel to help us understand how users are engaging our site. This data is reported to us anonymously. Despite what the boilerplate says below, we do not collect or store your personal information on this site. If you have any questions or concerns, please contact us at gianelliscafe@gmail.com.
+            We designed this website to be minimally invasive to your privacy. We use normal web technologies, such as Google or Cloudflare fonts, common programming libraries such as JQuery, and Google Maps. In our cookie consent settings we do ask your permission to use an analytics pixel to help us understand how users are engaging our site. This data is reported to us anonymously. Despite what the boilerplate says below, we do not collect or store your personal information on this site. If you have any questions or concerns, please contact us at gianelliscafe@gmail.com.
           </p>
           <div id="privacy-policy">
             <style>
